@@ -11,6 +11,7 @@ public class RecruiterProfile {
 
     @OneToOne
     @JoinColumn(name = "user_account_id")
+    @MapsId
     private Users userId;
 
     private String firstName;
@@ -19,6 +20,7 @@ public class RecruiterProfile {
     private String state;
     private String country;
     private String company;
+
     @Column(nullable = true, length = 64)
     private String profilePhoto;
 
@@ -36,6 +38,10 @@ public class RecruiterProfile {
         this.country = country;
         this.company = company;
         this.profilePhoto = profilePhoto;
+    }
+
+    public RecruiterProfile(Users users) {
+        this.userId = users;
     }
 
     public int getUserAccountId() {

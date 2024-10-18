@@ -41,8 +41,7 @@ public class RecruiterProfileController {
             if (!recruiterProfile.isEmpty()) {
                 model.addAttribute("profile", recruiterProfile.get());
             }
-
-            return "recruiter_profile";
         }
+        return "recruiter_profile";
     }
 }

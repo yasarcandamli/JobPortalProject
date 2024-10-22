@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class JobCompanyId {
+public class JobCompany {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
@@ -14,10 +14,10 @@ public class JobCompanyId {
     private String name;
     private String logo;
 
-    public JobCompanyId() {
+    public JobCompany() {
     }
 
-    public JobCompanyId(Integer id, String name, String logo) {
+    public JobCompany(Integer id, String name, String logo) {
         Id = id;
         this.name = name;
         this.logo = logo;

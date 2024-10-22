@@ -22,7 +22,7 @@ public class JobPostActivity {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "jobCompanyId", referencedColumnName = "Id")
-    private JobCompanyId jobCompanyId;
+    private JobCompany jobCompanyId;
 
     @Transient
     private Boolean isActive;
@@ -43,7 +43,7 @@ public class JobPostActivity {
     public JobPostActivity() {
     }
 
-    public JobPostActivity(Integer jobPostId, Users postedById, JobLocation jobLocationId, JobCompanyId jobCompanyId,
+    public JobPostActivity(Integer jobPostId, Users postedById, JobLocation jobLocationId, JobCompany jobCompanyId,
                            Boolean isActive, Boolean isSaved, String descriptionOfJob, String jobType, String salary,
                            String remote, Date postedDate, String jobTitle) {
         this.jobPostId = jobPostId;
@@ -84,11 +84,11 @@ public class JobPostActivity {
         this.jobLocationId = jobLocationId;
     }
 
-    public JobCompanyId getJobCompanyId() {
+    public JobCompany getJobCompanyId() {
         return jobCompanyId;
     }
 
-    public void setJobCompanyId(JobCompanyId jobCompanyId) {
+    public void setJobCompanyId(JobCompany jobCompanyId) {
         this.jobCompanyId = jobCompanyId;
     }
 

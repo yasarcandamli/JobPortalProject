@@ -48,11 +48,11 @@ public class UsersController {
             List<UsersType> usersTypes = usersTypeService.getAll();
             model.addAttribute("getAllTypes", usersTypes);
             model.addAttribute("user", new Users());
-            return "redirect:/dashboard/";
+            return "dashboard";
         }
 
         usersService.addNew(users);
-        return "dashboard";
+        return "redirect:/dashboard/";
     }
 
     @GetMapping("/login")

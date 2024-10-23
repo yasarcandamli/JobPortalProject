@@ -97,9 +97,9 @@ public class JobSeekerProfileController {
             jobSeekerProfile.setProfilePhoto(imageName);
         }
 
-        if (!Objects.equals(image.getOriginalFilename(), "")) {
+        if (!Objects.equals(pdf.getOriginalFilename(), "")) {
             resumeName = StringUtils.cleanPath(Objects.requireNonNull(pdf.getOriginalFilename()));
-            jobSeekerProfile.setProfilePhoto(resumeName);
+            jobSeekerProfile.setResume(resumeName);
         }
 
         JobSeekerProfile seekerProfile = jobSeekerProfileService.addNew(jobSeekerProfile);
